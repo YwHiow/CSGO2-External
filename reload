@@ -1,0 +1,6 @@
+#!/bin/sh
+
+sudo ./uload
+cmake .
+make -j$(grep "^processor" /proc/cpuinfo | wc -l) "$@"
+sudo ./load

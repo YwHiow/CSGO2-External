@@ -1,0 +1,10 @@
+#!/bin/bash
+if [ ! -d ".git" ]; then
+    echo ""
+    exit
+else
+    git pull
+    git submodule update --init --recursive --remote
+    cmake .
+    make -j$(grep "^processor" /proc/cpuinfo | wc -l) "$@"
+fi

@@ -1,0 +1,8 @@
+
+BasedOnStyle: WebKit
+BreakBeforeBraces: Allman
+AllowShortIfStatementsOnASingleLine: false
+PointerAlignment: Left
+IndentCaseLabels: false
+#ColumnLimit: 0
+UseTab: Always
